@@ -11,21 +11,19 @@ torch.manual_seed(seed)
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
     
-all_feats = np.load('/idiap/temp/hotroshi/paper/UTFVP/data/all_imgs_aug.npy')
-#all_imgs = np.load('/idiap/temp/hotroshi/paper/data/all_imgs.npy')
+all_feats = np.load('../../data/all_imgs_aug.npy')
 ######### Pytorch
 #all_imgs  = np.reshape(all_imgs, (all_imgs.shape[0], 1, all_imgs.shape[1], all_imgs.shape[2]))
 all_feats = np.reshape(all_feats,(all_feats.shape[0], 1, all_feats.shape[1], all_feats.shape[2]))
 
 import pickle
-with open('/idiap/temp/hotroshi/paper/UTFVP/data/all_client_ids_aug.pkl','rb') as f:
+with open('../../data/all_client_ids_aug.pkl','rb') as f:
     all_client_ids=pickle.load(f)
 
 
-#all_input = all_feats[:,:,2:-2,:]/255.
 #(380, 672) -> (384, 672)
 all_input = np.zeros([all_feats.shape[0], all_feats.shape[1], all_feats.shape[2]+4, all_feats.shape[3]])
-all_input[:,:,2:-2,:] = all_feats[:,:,:,:]#/255.
+all_input[:,:,2:-2,:] = all_feats[:,:,:,:]
     
 print("data is ready")
 
@@ -57,14 +55,6 @@ def data_gen(all_feats, all_client_ids, batch_size=32):
                         #for j in range(len(all_feats)):
                         for j in np.random.randint(all_feats.shape[0], size=10):
                             if all_client_ids[i] !=  all_client_ids[j]:
-
-                                #all_triplets.append([all_feats[i],all_feats[j],all_feats[k]])
-                                '''
-                                all_anchor.append(all_feats[i])
-                                all_pos.append(all_feats[j])
-                                all_neg.append(all_feats[k])
-                                '''
-                               # print(all_client_ids[i],all_client_ids[j],all_client_ids[k])
                                 
                                 all_anchor[counter,:,:,:] = all_feats[i]
                                 all_pos[counter,:,:,:]    = all_feats[j]
@@ -176,12 +166,11 @@ if device =='cuda':
     model = model.cuda()
     
 def my_triplet_loss(embedded_anchor, embedded_positive, embedded_negative):
-    distance_anchor_positive   = (embedded_anchor - embedded_positive).pow(2).mean()  # .pow(.5)
-    distance_anchor_negative   = (embedded_anchor - embedded_negative).pow(2).mean()  # .pow(.5)
-    distance_positive_negative = (embedded_positive - embedded_negative).pow(2).mean()  # .pow(.5)
-    losses = distance_anchor_positive - distance_anchor_negative# - distance_positive_negative
-    return distance_anchor_positive, distance_anchor_negative, distance_positive_negative, F.sigmoid(losses)#.mean()
-    #return distance_anchor_positive, distance_anchor_negative, distance_positive_negative, losses
+    distance_anchor_positive   = (embedded_anchor - embedded_positive).pow(2).mean()  
+    distance_anchor_negative   = (embedded_anchor - embedded_negative).pow(2).mean()  
+    distance_positive_negative = (embedded_positive - embedded_negative).pow(2).mean()  
+    losses = distance_anchor_positive - distance_anchor_negative
+    return distance_anchor_positive, distance_anchor_negative, distance_positive_negative, F.sigmoid(losses)
     
 def AE_loss(decoded, native):
     MAE = nn.L1Loss()
@@ -276,8 +265,6 @@ with open('mylog.csv','w') as f:
 with open('models_log.csv','w') as f:
     f.write('epoch, lr, total loss(train), total_AE_loss(train), AE_loss_anchor(train), AE_loss_positive(train), AE_loss_negative(train), anchor_MAE(train), pos_MAE(train), neg_MAE(train), anchor_MSE(train), pos_MSE(train), neg_MSE(train), triplet(train), p/n(train), a/p(train), a/n(train), total loss(validation), total_AE_loss(validation), AE_loss_anchor(validation), AE_loss_positive(validation), AE_loss_negative(validation), anchor_MAE(validation), pos_MAE(validation), neg_MAE(validation), anchor_MSE(validation), pos_MSE(validation), neg_MSE(validation), triplet(validation), p/n(validation), a/p(validation), a/n(validation) \n')
 
-# with open('training_log.csv','w') as f:
-#     f.write('epoch, epoch_itr, total_itr, lr, total loss(train), total_AE_loss(train), AE_loss_anchor(train), AE_loss_positive(train), AE_loss_negative(train), anchor_MAE(train), pos_MAE(train), neg_MAE(train), anchor_MSE(train), pos_MSE(train), neg_MSE(train), triplet(train), p/n(train), a/p(train), a/n(train), total loss(validation), total_AE_loss(validation), AE_loss_anchor(validation), AE_loss_positive(validation), AE_loss_negative(validation), anchor_MAE(validation), pos_MAE(validation), neg_MAE(validation), anchor_MSE(validation), pos_MSE(validation), neg_MSE(validation), triplet(validation), p/n(validation), a/p(validation), a/n(validation) \n')    
 
 num_epochs=80
 all_itrations = 0
@@ -328,25 +315,6 @@ for epoch in range(num_epochs):
                         embeding_triplet_loss.item(),\
                         distance_positive_negative.item(), distance_anchor_positive.item(), distance_anchor_negative.item()))
 
-        
-#         if iteration % 50 == 0:            
-#             #evaluate_train = evaluate_model(all_feats_train, all_client_ids_train, device)
-#             evaluate_validation = evaluate_model(all_feats_validation, all_client_ids_validation, device)
-#             with open('training_log.csv','a') as f:
-#                 f.write('{}, {}, {}, {:.5f}, {:.4f}, {:.4f}, {:.4f},{:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f},{:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}, {:.4f}\n'.format(epoch+1, iteration, all_itrations, optimizer.param_groups[0]["lr"],  \
-#                     total_loss.data.item(), total_AE_loss.data.item(),\
-#                     anchor_AE_loss.item(), positive_AE_loss.item(), negative_AE_loss.item(), 
-#                     anchor_MAE.item(), positive_MAE.item(), negative_MAE.item(),\
-#                     anchor_MSE.item(), positive_MSE.item(), negative_MSE.item(),\
-#                     embeding_triplet_loss.item(),\
-#                     distance_positive_negative.item(), distance_anchor_positive.item(),\
-#                     distance_anchor_negative.item(),\
-#                     evaluate_validation[0], evaluate_validation[1], evaluate_validation[2],\
-#                     evaluate_validation[3], evaluate_validation[4], evaluate_validation[5],\
-#                     evaluate_validation[6], evaluate_validation[7], evaluate_validation[8],\
-#                     evaluate_validation[9], evaluate_validation[10], evaluate_validation[11],\
-#                     evaluate_validation[12], evaluate_validation[13], evaluate_validation[14]
-#                     ))
                 
         if iteration==train_steps_per_epoch:
             break
