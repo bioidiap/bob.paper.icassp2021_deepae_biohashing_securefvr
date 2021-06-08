@@ -1,0 +1,154 @@
+[Min. criterion: EER ] Threshold on Development set `../../model/alpha_0/emb_100/verify/results/img-AE-BHsh-100/baseline/nom/nonorm/scores-dev`: -3.250000e-01
+=====================  ===============
+..                     Development
+=====================  ===============
+Failure to Acquire     0.0%
+False Match Rate       0.1% (24/46224)
+False Non Match Rate   0.0% (0/432)
+False Accept Rate      0.1%
+False Reject Rate      0.0%
+Half Total Error Rate  0.0%
+=====================  ===============
+[Min. criterion: EER ] Threshold on Development set `../../model/alpha_0/emb_100/verify/results/img-AE-BHsh-100/baseline/nom/nonorm/scores-eval`: -3.250000e-01
+=====================  ================
+..                     Development
+=====================  ================
+Failure to Acquire     0.0%
+False Match Rate       0.0% (42/146688)
+False Non Match Rate   0.0% (0/768)
+False Accept Rate      0.0%
+False Reject Rate      0.0%
+Half Total Error Rate  0.0%
+=====================  ================
+[Min. criterion: EER ] Threshold on Development set `../../model/wld/results/wld-BHsh-100/baseline/nom/nonorm/scores-dev`: -3.050000e-01
+=====================  ================
+..                     Development
+=====================  ================
+Failure to Acquire     0.0%
+False Match Rate       1.5% (707/46224)
+False Non Match Rate   1.6% (7/432)
+False Accept Rate      1.5%
+False Reject Rate      1.6%
+Half Total Error Rate  1.6%
+=====================  ================
+[Min. criterion: EER ] Threshold on Development set `../../model/wld/results/wld-BHsh-100/baseline/nom/nonorm/scores-eval`: -2.950000e-01
+=====================  ==================
+..                     Development
+=====================  ==================
+Failure to Acquire     0.0%
+False Match Rate       1.4% (1997/146688)
+False Non Match Rate   1.7% (13/768)
+False Accept Rate      1.4%
+False Reject Rate      1.7%
+Half Total Error Rate  1.5%
+=====================  ==================
+[Min. criterion: EER ] Threshold on Development set `../../model/mc/results/mc-BHsh-100/baseline/nom/nonorm/scores-dev`: -2.550000e-01
+=====================  ================
+..                     Development
+=====================  ================
+Failure to Acquire     0.0%
+False Match Rate       1.8% (817/46224)
+False Non Match Rate   2.8% (12/432)
+False Accept Rate      1.8%
+False Reject Rate      2.8%
+Half Total Error Rate  2.3%
+=====================  ================
+[Min. criterion: EER ] Threshold on Development set `../../model/mc/results/mc-BHsh-100/baseline/nom/nonorm/scores-eval`: -2.650000e-01
+=====================  ==================
+..                     Development
+=====================  ==================
+Failure to Acquire     0.0%
+False Match Rate       2.9% (4204/146688)
+False Non Match Rate   2.3% (18/768)
+False Accept Rate      2.9%
+False Reject Rate      2.3%
+Half Total Error Rate  2.6%
+=====================  ==================
+[Min. criterion: EER ] Threshold on Development set `../../model/rlt/results/rlt-BHsh-100/baseline/nom/nonorm/scores-dev`: -1.650000e-01
+=====================  ================
+..                     Development
+=====================  ================
+Failure to Acquire     0.0%
+False Match Rate       0.4% (190/46224)
+False Non Match Rate   0.7% (3/432)
+False Accept Rate      0.4%
+False Reject Rate      0.7%
+Half Total Error Rate  0.6%
+=====================  ================
+[Min. criterion: EER ] Threshold on Development set `../../model/rlt/results/rlt-BHsh-100/baseline/nom/nonorm/scores-eval`: -1.650000e-01
+=====================  =================
+..                     Development
+=====================  =================
+Failure to Acquire     0.0%
+False Match Rate       0.5% (783/146688)
+False Non Match Rate   0.7% (5/768)
+False Accept Rate      0.5%
+False Reject Rate      0.7%
+Half Total Error Rate  0.6%
+=====================  =================
+[Min. criterion: EER ] Threshold on Development set `../../model/wld/results/wld/baseline/nom/nonorm/scores-dev`: 2.448922e-01
+=====================  ================
+..                     Development
+=====================  ================
+Failure to Acquire     0.0%
+False Match Rate       1.9% (856/46224)
+False Non Match Rate   1.9% (8/432)
+False Accept Rate      1.9%
+False Reject Rate      1.9%
+Half Total Error Rate  1.9%
+=====================  ================
+[Min. criterion: EER ] Threshold on Development set `../../model/wld/results/wld/baseline/nom/nonorm/scores-eval`: 2.385655e-01
+=====================  ==================
+..                     Development
+=====================  ==================
+Failure to Acquire     0.0%
+False Match Rate       3.8% (5539/146688)
+False Non Match Rate   3.8% (29/768)
+False Accept Rate      3.8%
+False Reject Rate      3.8%
+Half Total Error Rate  3.8%
+=====================  ==================
+[Min. criterion: EER ] Threshold on Development set `../../model/mc/results/mc/baseline/nom/nonorm/scores-dev`: 5.775472e-02
+=====================  ================
+..                     Development
+=====================  ================
+Failure to Acquire     0.0%
+False Match Rate       1.6% (750/46224)
+False Non Match Rate   1.6% (7/432)
+False Accept Rate      1.6%
+False Reject Rate      1.6%
+Half Total Error Rate  1.6%
+=====================  ================
+[Min. criterion: EER ] Threshold on Development set `../../model/mc/results/mc/baseline/nom/nonorm/scores-eval`: 5.560387e-02
+=====================  ==================
+..                     Development
+=====================  ==================
+Failure to Acquire     0.0%
+False Match Rate       2.3% (3438/146688)
+False Non Match Rate   2.3% (18/768)
+False Accept Rate      2.3%
+False Reject Rate      2.3%
+Half Total Error Rate  2.3%
+=====================  ==================
+[Min. criterion: EER ] Threshold on Development set `../../model/rlt/results/rlt/baseline/nom/nonorm/scores-dev`: 2.772830e-01
+=====================  =================
+..                     Development
+=====================  =================
+Failure to Acquire     0.0%
+False Match Rate       2.8% (1284/46224)
+False Non Match Rate   2.8% (12/432)
+False Accept Rate      2.8%
+False Reject Rate      2.8%
+Half Total Error Rate  2.8%
+=====================  =================
+[Min. criterion: EER ] Threshold on Development set `../../model/rlt/results/rlt/baseline/nom/nonorm/scores-eval`: 2.763510e-01
+=====================  ==================
+..                     Development
+=====================  ==================
+Failure to Acquire     0.0%
+False Match Rate       4.6% (6685/146688)
+False Non Match Rate   4.6% (35/768)
+False Accept Rate      4.6%
+False Reject Rate      4.6%
+Half Total Error Rate  4.6%
+=====================  ==================

@@ -1,0 +1,88 @@
+[Min. criterion: EER ] Threshold on Development set `../../model/alpha_0/emb_100/verify/results/img-AE-BHsh-100-stolen/baseline/nom/nonorm/scores-dev`: -1.750000e-01
+=====================  ==================
+..                     Development
+=====================  ==================
+Failure to Acquire     0.0%
+False Match Rate       18.6% (8587/46224)
+False Non Match Rate   16.4% (71/432)
+False Accept Rate      18.6%
+False Reject Rate      16.4%
+Half Total Error Rate  17.5%
+=====================  ==================
+[Min. criterion: EER ] Threshold on Development set `../../model/alpha_0/emb_100/verify/results/img-AE-BHsh-100-stolen/baseline/nom/nonorm/scores-eval`: -1.650000e-01
+=====================  ====================
+..                     Development
+=====================  ====================
+Failure to Acquire     0.0%
+False Match Rate       18.7% (27411/146688)
+False Non Match Rate   16.7% (128/768)
+False Accept Rate      18.7%
+False Reject Rate      16.7%
+Half Total Error Rate  17.7%
+=====================  ====================
+[Min. criterion: EER ] Threshold on Development set `../../model/wld/results/wld-BHsh-100-stolen/baseline/nom/nonorm/scores-dev`: -2.050000e-01
+=====================  ===================
+..                     Development
+=====================  ===================
+Failure to Acquire     0.0%
+False Match Rate       40.2% (18598/46224)
+False Non Match Rate   32.4% (140/432)
+False Accept Rate      40.2%
+False Reject Rate      32.4%
+Half Total Error Rate  36.3%
+=====================  ===================
+[Min. criterion: EER ] Threshold on Development set `../../model/wld/results/wld-BHsh-100-stolen/baseline/nom/nonorm/scores-eval`: -1.950000e-01
+=====================  ====================
+..                     Development
+=====================  ====================
+Failure to Acquire     0.0%
+False Match Rate       34.3% (50254/146688)
+False Non Match Rate   44.0% (338/768)
+False Accept Rate      34.3%
+False Reject Rate      44.0%
+Half Total Error Rate  39.1%
+=====================  ====================
+[Min. criterion: EER ] Threshold on Development set `../../model/mc/results/mc-BHsh-100-stolen/baseline/nom/nonorm/scores-dev`: -1.650000e-01
+=====================  ===================
+..                     Development
+=====================  ===================
+Failure to Acquire     0.0%
+False Match Rate       51.1% (23626/46224)
+False Non Match Rate   40.3% (174/432)
+False Accept Rate      51.1%
+False Reject Rate      40.3%
+Half Total Error Rate  45.7%
+=====================  ===================
+[Min. criterion: EER ] Threshold on Development set `../../model/mc/results/mc-BHsh-100-stolen/baseline/nom/nonorm/scores-eval`: -1.550000e-01
+=====================  ====================
+..                     Development
+=====================  ====================
+Failure to Acquire     0.0%
+False Match Rate       42.1% (61731/146688)
+False Non Match Rate   53.0% (407/768)
+False Accept Rate      42.1%
+False Reject Rate      53.0%
+Half Total Error Rate  47.5%
+=====================  ====================
+[Min. criterion: EER ] Threshold on Development set `../../model/rlt/results/rlt-BHsh-100-stolen/baseline/nom/nonorm/scores-dev`: -7.500000e-02
+=====================  ===================
+..                     Development
+=====================  ===================
+Failure to Acquire     0.0%
+False Match Rate       44.1% (20365/46224)
+False Non Match Rate   39.8% (172/432)
+False Accept Rate      44.1%
+False Reject Rate      39.8%
+Half Total Error Rate  41.9%
+=====================  ===================
+[Min. criterion: EER ] Threshold on Development set `../../model/rlt/results/rlt-BHsh-100-stolen/baseline/nom/nonorm/scores-eval`: -7.500000e-02
+=====================  ====================
+..                     Development
+=====================  ====================
+Failure to Acquire     0.0%
+False Match Rate       46.8% (68600/146688)
+False Non Match Rate   34.4% (264/768)
+False Accept Rate      46.8%
+False Reject Rate      34.4%
+Half Total Error Rate  40.6%
+=====================  ====================
