@@ -34,7 +34,7 @@ $ conda activate ICASSP2021_DAE_SecureFVR
 
 ## Downloading the Databases
 
-The next thing you must do is to download the UTFVP fingervein database used in our experiments.  Please refer to the following website to do this: 
+The next thing you must do is to download the UTFVP fingervein database used in our experiments.  Please refer to the [this link](https://www.utwente.nl/en/eemcs/dmb/downloads/utfvp/) to download this database.
 
 Take note of the directory in which you have stored the downloaded database.  Then, create a textfile named ``.bob_bio_databases.txt`` and **store it in your home directory.**  Inside this textfile, insert the following line:
 
