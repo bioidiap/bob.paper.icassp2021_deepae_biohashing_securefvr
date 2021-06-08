@@ -26,10 +26,10 @@ In the instructions that follow, the use of `< ... >` inside file paths indicate
 The experiments can only be executed on a Linux 64-bit machine.
 Install [conda](https://conda.io) and run the steps below::
 ```
-   $ git clone https://gitlab.idiap.ch/bob/bob.paper.icassp2021_deepae_biohashing_securefvr.git
-   $ cd bob.paper.icassp2021_deepae_biohashing_securefvr
-   $ conda create -n ICASSP2021_DAE_SecureFVR --file package-list.txt
-   $ conda activate ICASSP2021_DAE_SecureFVR
+$ git clone https://gitlab.idiap.ch/bob/bob.paper.icassp2021_deepae_biohashing_securefvr.git
+$ cd bob.paper.icassp2021_deepae_biohashing_securefvr
+$ conda create -n ICASSP2021_DAE_SecureFVR --file package-list.txt
+$ conda activate ICASSP2021_DAE_SecureFVR
 ```
 
 ## Downloading the Databases
@@ -39,7 +39,7 @@ The next thing you must do is to download the UTFVP fingervein database used in 
 Take note of the directory in which you have stored the downloaded database.  Then, create a textfile named ``.bob_bio_databases.txt`` and **store it in your home directory.**  Inside this textfile, insert the following line:
 
 ```
-   [YOUR_UTFVP_DIRECTORY] = <path_to_utfvp_database>
+[YOUR_UTFVP_DIRECTORY] = <path_to_utfvp_database>
 ```
 
 Make sure you replace `<path_to_utfvp_database>` with the path to your downloaded UTFVP database.
