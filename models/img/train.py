@@ -1,4 +1,4 @@
-alpha=0
+alpha=0.1
 embedding_layer_length=100
 print("start the code")
 import numpy as np
@@ -57,8 +57,8 @@ def data_gen(all_feats, all_client_ids, batch_size=32):
                             if all_client_ids[i] !=  all_client_ids[j]:
                                 
                                 all_anchor[counter,:,:,:] = all_feats[i]
-                                all_pos[counter,:,:,:]    = all_feats[j]
-                                all_neg[counter,:,:,:]    = all_feats[k]
+                                all_pos[counter,:,:,:]    = all_feats[k]
+                                all_neg[counter,:,:,:]    = all_feats[j]
                                 counter +=1
                                 
                                 if counter ==batch_size:
